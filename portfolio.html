@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nancy Chemutai · Data Scientist</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- NAV -->
+    <nav>
+        <a href="#home" class="nav-logo">Nancy<span>.</span>DS</a>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="#contact" class="nav-cta">Hire Me</a>
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+    </nav>
+
+    <!-- HERO -->
+    <section id="home">
+        <div class="hero-content">
+            <div class="hero-label">Available for opportunities</div>
+            <h1 class="hero-title">
+                Data<br>
+                <span class="line2">Scientist &amp;</span><br> Analyst
+            </h1>
+            <p class="hero-desc">
+                Transforming complex datasets into actionable insights. Specializing in machine learning, predictive modelling, and data storytelling across fintech, health, and e-commerce domains.
+            </p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn-primary">View Projects →</a>
+                <a href="#education" class="btn-outline">Download CV</a>
+            </div>
+        </div>
+
+        <div class="hero-visual">
+            <div style="width:100%">
+                <div class="hero-card">
+                    <div class="terminal-bar">
+                        <div class="t-dot"></div>
+                        <div class="t-dot"></div>
+                        <div class="t-dot"></div>
+                        <span style="font-size:11px;color:var(--muted);margin-left:8px">model_pipeline.py</span>
+                    </div>
+                    <div class="terminal-code">
+                        <div><span class="kw">import</span> pandas <span class="kw">as</span> pd</div>
+                        <div><span class="kw">from</span> sklearn.ensemble <span class="kw">import</span> <span class="fn">RandomForestClassifier</span></div>
+                        <div>&nbsp;</div>
+                        <div><span class="cm"># Load and preprocess dataset</span></div>
+                        <div>df = pd.<span class="fn">read_csv</span>(<span class="str">'churn_data.csv'</span>)</div>
+                        <div>X, y = df.drop(<span class="str">'churn'</span>, axis=<span class="fn">1</span>), df[<span class="str">'churn'</span>]</div>
+                        <div>&nbsp;</div>
+                        <div>model = <span class="fn">RandomForestClassifier</span>(n_estimators=<span class="fn">200</span>)</div>
+                        <div>model.<span class="fn">fit</span>(X_train, y_train)</div>
+                        <div>&nbsp;</div>
+                        <div><span class="out">▶ Accuracy: 94.2% &nbsp;F1: 0.91<span class="blink">_</span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="stats-row">
+                    <div class="stat-item">
+                        <span class="stat-num" data-target="5">0</span>
+                        <span class="stat-lbl">Projects</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num" data-target="3">0</span>
+                        <span class="stat-lbl">Years Exp</span>
+                    </div>
+                    <!-- <div class="stat-item">
+                        <span class="stat-num" data-target="0">0</span>
+                        <span class="stat-lbl">Clients</span>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+        <div class="section-wrap">
+            <div class="section-header">
+                <div>
+                    <span class="section-num">02 — Projects</span>
+                    <h2 class="section-title">Featured Work</h2>
+                </div>
+                <a href="#contact" class="btn-outline" style="font-size:11px">All Projects →</a>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card fade-in">
+                    <span class="project-num">01</span>
+                    <div class="project-tag">Machine Learning</div>
+                    <h3 class="project-title">Customer Churn Predictor</h3>
+                    <p class="project-desc">Built an end-to-end churn prediction pipeline for a telecom company, reducing churn by 23% through targeted retention campaigns. Deployed as a real-time scoring API.</p>
+                    <div class="tech-stack">
+                        <span class="tech-pill">Python</span>
+                        <span class="tech-pill">XGBoost</span>
+                        <span class="tech-pill">FastAPI</span>
+                        <span class="tech-pill">Docker</span>
+                        <span class="tech-pill">AWS</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="proj-link">GitHub →</a>
+                        <a href="#" class="proj-link" style="color:var(--muted)">Live Demo →</a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card fade-in">
+                    <span class="project-num">02</span>
+                    <div class="project-tag" style="color:var(--accent2);border-color:rgba(123,97,255,0.3)">NLP / LLM</div>
+                    <h3 class="project-title">Medical Document Classifier</h3>
+                    <p class="project-desc">Fine-tuned a BERT-based model to classify 50,000+ medical reports into ICD-10 categories with 91% accuracy, cutting manual review time by 60% for a hospital system.</p>
+                    <div class="tech-stack">
+                        <span class="tech-pill">PyTorch</span>
+                        <span class="tech-pill">HuggingFace</span>
+                        <span class="tech-pill">BERT</span>
+                        <span class="tech-pill">PostgreSQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="proj-link">GitHub →</a>
+                        <a href="#" class="proj-link" style="color:var(--muted)">Case Study →</a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card fade-in">
+                    <span class="project-num">03</span>
+                    <div class="project-tag" style="color:var(--accent3);border-color:rgba(255,107,53,0.3)">Data Engineering</div>
+                    <h3 class="project-title">Real-time Sales Dashboard</h3>
+                    <p class="project-desc">Designed a Kafka-powered streaming pipeline ingesting 2M+ daily events, feeding a live Tableau dashboard used by 200+ sales reps across 5 African markets.</p>
+                    <div class="tech-stack">
+                        <span class="tech-pill">Apache Kafka</span>
+                        <span class="tech-pill">Spark</span>
+                        <span class="tech-pill">Tableau</span>
+                        <span class="tech-pill">GCP</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="proj-link">GitHub →</a>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card fade-in">
+                    <span class="project-num">04</span>
+                    <div class="project-tag">Computer Vision</div>
+                    <h3 class="project-title">Crop Disease Detection</h3>
+                    <p class="project-desc">Developed a CNN model achieving 89% accuracy in identifying 15 cassava and maize diseases from smartphone images. Deployed as a mobile-first web app for smallholder farmers.</p>
+                    <div class="tech-stack">
+                        <span class="tech-pill">TensorFlow</span>
+                        <span class="tech-pill">OpenCV</span>
+                        <span class="tech-pill">React Native</span>
+                        <span class="tech-pill">Firebase</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="proj-link">GitHub →</a>
+                        <a href="#" class="proj-link" style="color:var(--muted)">Live App →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--WORK EXPERIENCE-->
+    <section id="experience">
+        <div class="section-wrap">
+            <div class="section-header">
+                <div>
+                    <span class="section-num">03 — Experience</span>
+                    <h2 class="section-title">Experience</h2>
+                </div>
+            </div>
+
+            <div class="exp-grid">
+                <!-- Timeline -->
+                <div class="exp-timeline">
+                    <div class="exp-item fade-in">
+                        <div class="exp-year">June, 2022 – Present</div>
+                        <div class="exp-title">Web Research & Data Specialist</div>
+                        <div class="exp-company">Heat Intelligence | Remote | Tel Aviv, IL</div>
+                        <div class="exp-desc">
+                            <li>Perform data preprocessing on the collected data by handling missing values and cleaning the web data before entering it into the system to ensure 99% accuracy.</li>
+                            <li>Perform data preprocessing on collected data by handling missing values and cleaning the web data before entering them into the system to ensure 99% accuracy.</li>
+                            <li>Perform text and NLP annotation techniques, entity labeling, intent classification, sentiment tagging, text classification, document categorization and review, POS tagging, and NER, to curate high-quality datasets used in training
+                                and fine-tuning ML, AI, and LLM models.
+                            </li>
+                        </div>
+                    </div>
+                    <div class="exp-item fade-in">
+                        <div class="exp-year">September, 2022 – August, 2024</div>
+                        <div class="exp-title">Part-time Lecturer</div>
+                        <div class="exp-company">Multimedia University of Kenya | Nairobi, Kenya</div>
+                        <div class="exp-desc">
+                            <li>Designed and updating course curricula for the Faculty of Computing and Information Technology (FoCIT), ensuring alignment with institutional goals and student needs.</li>
+                            <li>Evaluated 1500+ students in accordance with the university policies, providing constructive feedback, and assigning grades.</li>
+                            <li>Maintained a 98% accuracy rate in student records; achieved a 99% course success rate in core subjects, demonstrating consistent attention to detail and quality assurance.</li>
+                            <li>Achieved a 99% student success rate in core courses, indicating effective knowledge transfer and understanding among students.</li>
+                        </div>
+                    </div>
+                    <div class="exp-item fade-in">
+                        <div class="exp-year">August, 2023 - January, 2024</div>
+                        <div class="exp-title">Data Science Training and Internship</div>
+                        <div class="exp-company">10Alytics | Remote | Alberta, CA</div>
+                        <div class="exp-desc">
+                            <li>Built a supervised classification model to predict patient diabetes outcomes, achieving 92% accuracy.</li>
+                            <li>Designed automated ETL pipelines using Power BI and Tableau, reducing data integration time by 25% and report generation time by 35%.</li>
+                            <li>Implemented unsupervised learning technique (KMeans) for data clustering, grouping sales data into distinct segments, leading to insights for the marketing department and enhancing decision-making.</li>
+                        </div>
+                    </div>
+                    <div class="exp-item fade-in">
+                        <div class="exp-year">January, 2023 - July, 2023</div>
+                        <div class="exp-title">Data Scientist</div>
+                        <div class="exp-company">Seacrest Technology Limited | Nairobi, Kenya</div>
+                        <div class="exp-desc">
+                            <li>Collected and documented technical requirements for Telecommunications and Public Institutions clients, focusing on HR workflow automation and process optimization.</li>
+                            <li>Conducted requirement walkthroughs and mapped "Current vs. Target" business processes using Comidor to identify efficiency bottlenecks.</li>
+                            <li>Utilized PolyAnalyst 6.5 to analyze large datasets and reduce analysis time by 15% through standardized data formats, translating raw data into stakeholder-facing BI dashboards.</li>
+                            <li>Employed RPA tools (Comidor), web scrapers, and Python-based Excel processors to synchronize and verify customer data across systems, increasing operational efficiency.</li>
+                            <li>Authored comprehensive technical documentation providing traceable reasoning from raw data to model output, ensuring transparency in analytical workflows.</li>
+                            <li>Delivered an end-to-end anomaly detection prototype that improved operational efficiency by 20% through trend and pattern identification.</li>
+                        </div>
+                    </div>
+                    <div class="exp-item fade-in">
+                        <div class="exp-year">October, 2020 - March, 2021</div>
+                        <div class="exp-title">Data Annotator</div>
+                        <div class="exp-company">Remotasks | Remote</div>
+                        <div class="exp-desc">
+                            <li>Performed high-volume image annotation tasks including bounding box labelling, object detection markup, semantic segmentation, and polygon annotation. </li>
+                            <li>Applied consistent annotation protocols across large image datasets, maintaining quality and label precision required for computer vision model training pipelines.</li>
+                        </div>
+                    </div>
+                    <div class="exp-item fade-in">
+                        <div class="exp-year">August, 2019 - February,2020</div>
+                        <div class="exp-title">Data Entry Officer</div>
+                        <div class="exp-company">Safaricom, PLC | Nairobi</div>
+                        <div class="exp-desc">
+                            <li>Ensured 100% success rate for the KYC project (Project Thibitisha) by implementing rigorous verification processes.</li>
+                            <li>Analyzed, scanned, and accurately uploaded the collected documents to Safaricom’s dealer’s portal, maintaining a 99% accuracy rate compared to the checklist.</li>
+                            <li>Performed data entry and cleanup procedures with correctness, achieving a 95% accuracy rate, and compiled a detailed report for task documentation.</li>
+                            <li>Formulated data into tables and reports (using Excel VLOOKUP), resulting in a 90% improvement in project progress tracking and transparency.</li>
+                        </div>
+                    </div>
+                    <!-- <div class="exp-item fade-in">
+                        <div class="exp-year">December, 2024</div>
+                        <div class="exp-title">Safeguarding Progress: Addressing Network Vulnerabilities to Secure Research, Data, and Technology</div>
+                        <div class="exp-company">U.S. Department of State and CRDF Global</div>
+                        <div class="exp-desc">5-course specialisation covering CNNs, RNNs, transformers, and deployment.</div>
+                    </div> -->
+                </div>
+            </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education">
+        <div class="section-wrap">
+            <div class="section-header">
+                <div>
+                    <span class="section-num">04 — Education</span>
+                    <h2 class="section-title">Background &amp; Skills</h2>
+                </div>
+            </div>
+
+            <div class="edu-grid">
+                <!-- Timeline -->
+                <div class="edu-timeline">
+                    <div class="edu-item fade-in">
+                        <div class="edu-year">2011 – 2014</div>
+                        <div class="edu-degree">BCom. Business Information Systems (Option)</div>
+                        <div class="edu-school">University of Nairobi</div>
+                        <!-- <div class="edu-desc">First Class Honours. Thesis on predictive modelling of urban mobility patterns using ride-share data.</div> -->
+                    </div>
+                    <div class="edu-item fade-in">
+                        <div class="edu-year">2016 – 2019</div>
+                        <div class="edu-degree">MSc. Computer Based Information Systems</div>
+                        <div class="edu-school">Strathmore University</div>
+                        <!-- <div class="edu-desc">Specialisation in machine learning and big data systems. Graduated with distinction.</div> -->
+                    </div>
+                    <div class="edu-item fade-in">
+                        <div class="edu-year">July - December, 2025</div>
+                        <div class="edu-degree">AI For Software Engineering</div>
+                        <div class="edu-school">Power Learn Project</div>
+                        <div class="edu-desc">5-course specialisation covering CNNs, RNNs, transformers, and deployment.</div>
+                    </div>
+                    <div class="edu-item fade-in">
+                        <div class="edu-year">May - August, 2025</div>
+                        <div class="edu-degree">AWS Machine Learning Fundamentals</div>
+                        <div class="edu-school">Udacity (Nanodegree Program)</div>
+                        <div class="edu-desc">End-to-end ML workflow on AWS: Lambda, SageMaker, model deployment, MLOps best practices.</div>
+                    </div>
+                    <div class="edu-item fade-in">
+                        <div class="edu-year">May - August, 2025</div>
+                        <div class="edu-degree">Data & AI Specialist</div>
+                        <div class="edu-school">CyberShujaa</div>
+                        <div class="edu-desc">5-course specialisation covering CNNs, RNNs, transformers, and deployment.</div>
+                    </div>
+                    <div class="edu-item fade-in">
+                        <div class="edu-year">August - December,2024</div>
+                        <div class="edu-degree">Applied Data Science Lab</div>
+                        <div class="edu-school">WorldQuant University</div>
+                        <div class="edu-desc">5-course specialisation covering CNNs, RNNs, transformers, and deployment.</div>
+                    </div>
+                    <div class="edu-item fade-in">
+                        <div class="edu-year">December, 2024</div>
+                        <div class="edu-degree">Safeguarding Progress: Addressing Network Vulnerabilities to Secure Research, Data, and Technology</div>
+                        <div class="edu-school">U.S. Department of State and CRDF Global</div>
+                        <div class="edu-desc">5-course specialisation covering CNNs, RNNs, transformers, and deployment.</div>
+                    </div>
+                    <!-- <div class="edu-item fade-in">
+                        <div class="edu-year">2024</div>
+                        <div class="edu-degree">Deep Learning Specialisation</div>
+                        <div class="edu-school">DeepLearning.AI / Coursera</div>
+                        <div class="edu-desc">5-course specialisation covering CNNs, RNNs, transformers, and deployment.</div>
+                    </div> -->
+
+                    <!-- CV Download -->
+                    <div class="cv-download">
+                        <div class="cv-info">
+                            <h4>Full Curriculum Vitae</h4>
+                            <p>PDF · Updated March 2026 · 2 pages</p>
+                        </div>
+                        <a href="#" class="cv-btn" onclick="downloadCV(event)">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg> Download CV
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Skills -->
+                <div>
+                    <div class="skills-panel fade-in">
+                        <h3>Technical Proficiency</h3>
+
+                        <div class="skill-row">
+                            <div class="skill-label"><span>Python / Pandas / NumPy</span><span class="skill-pct">95%</span></div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" style="width:95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-row">
+                            <div class="skill-label"><span>Machine Learning (sklearn, XGBoost)</span><span class="skill-pct">92%</span></div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" style="width:92%;animation-delay:0.1s"></div>
+                            </div>
+                        </div>
+                        <div class="skill-row">
+                            <div class="skill-label"><span>Deep Learning (TensorFlow / PyTorch)</span><span class="skill-pct">85%</span></div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" style="width:85%;animation-delay:0.2s"></div>
+                            </div>
+                        </div>
+                        <div class="skill-row">
+                            <div class="skill-label"><span>SQL / Data Engineering</span><span class="skill-pct">88%</span></div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" style="width:88%;animation-delay:0.3s"></div>
+                            </div>
+                        </div>
+                        <div class="skill-row">
+                            <div class="skill-label"><span>Data Visualisation (Tableau, Power BI, Plotly)</span><span class="skill-pct">90%</span></div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" style="width:90%;animation-delay:0.4s"></div>
+                            </div>
+                        </div>
+                        <div class="skill-row">
+                            <div class="skill-label"><span>Cloud (AWS)</span><span class="skill-pct">80%</span></div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" style="width:80%;animation-delay:0.5s"></div>
+                            </div>
+                        </div>
+                        <div class="skill-row">
+                            <div class="skill-label"><span>NLP / LLM Integration</span><span class="skill-pct">82%</span></div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" style="width:82%;animation-delay:0.6s"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tools -->
+                    <div class="skills-panel fade-in" style="margin-top:16px">
+                        <h3>Tools &amp; Ecosystem</h3>
+                        <div class="tech-stack" style="margin-top:8px">
+                            <span class="tech-pill">Jupyter</span>
+                            <span class="tech-pill">VS Code</span>
+                            <span class="tech-pill">Git / GitHub</span>
+                            <!-- <span class="tech-pill">Docker</span> -->
+                            <!-- <span class="tech-pill">Apache Spark</span> -->
+                            <!-- <span class="tech-pill">Kafka</span> -->
+                            <!-- <span class="tech-pill">dbt</span> -->
+                            <!-- <span class="tech-pill">Airflow</span> -->
+                            <!-- <span class="tech-pill">MLflow</span> -->
+                            <span class="tech-pill">Google Colab</span>
+                            <span class="tech-pill">Excel</span>
+                            <span class="tech-pill">Tableau</span>
+                            <span class="tech-pill">Power BI</span>
+                            <span class="tech-pill">Streamlit</span>
+                            <span class="tech-pill">vercel</span>
+                            <span class="tech-pill">HuggingFace</span>
+                            <span class="tech-pill">AWS SageMaker</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="section-wrap">
+            <div class="section-header">
+                <div>
+                    <span class="section-num">05 — Contact</span>
+                    <h2 class="section-title">Get in Touch</h2>
+                </div>
+            </div>
+
+            <div class="contact-grid">
+                <div>
+                    <p class="contact-intro">"Let's turn your data into decisions."</p>
+                    <p style="color:var(--muted);font-size:13px;line-height:1.8;margin-bottom:32px">
+                        Open to freelance projects, full-time roles, and consulting engagements. Based in Nairobi, available for remote work globally.
+                    </p>
+                    <div class="contact-links">
+                        <a href="mailto:nancy.chemutai254@gmail.com" class="contact-link">
+                            <div class="contact-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            </div>
+                            nancy.chemutai254@gmail.com
+                        </a>
+                        <a href="https://linkedin.com/in/nancychemutai/" target="_blank" class="contact-link">
+                            <div class="contact-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+                            </div>
+                            linkedin.com/in/nancychemutai
+                        </a>
+                        <a href="https://github.com/chemutai254" target="_blank" class="contact-link">
+                            <div class="contact-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+                            </div>
+                            github.com/chemutai254
+                        </a>
+                        <a href="tel:+254711538099" class="contact-link">
+                            <div class="contact-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 5.5a19.79 19.79 0 01-3.07-8.64A2 2 0 011.91 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                            </div>
+                            +254 711 538 099
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div>
+                    <form class="contact-form" onsubmit="handleSubmit(event)">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input type="text" placeholder="Jane Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" placeholder="jane@company.com" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Subject</label>
+                            <select>
+              <option value="">Select a topic</option>
+              <option>Freelance Project</option>
+              <option>Full-time Role</option>
+              <option>Consulting</option>
+              <option>Collaboration</option>
+              <option>Other</option>
+            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea placeholder="Tell me about your project or opportunity..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">Send Message →</button>
+                        <div class="form-success" id="formSuccess">
+                            ✓ Message sent! I'll get back to you within 24 hours.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-copy">© 2026 Nancy Chemutai · Data Scientist · Nairobi, Kenya</div>
+        <div class="footer-socials">
+            <a href="https://github.com/chemutai254" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/nancychemutai" target="_blank">LinkedIn</a>
+            <!-- <a href="https://kaggle.com/chemutai254" target="_blank">Kaggle</a>
+            <a href="https://medium.com/@nancy.chemutai254" target="_blank">Medium</a> -->
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="style.js"></script>
+</body>
+
+</html>
